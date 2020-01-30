@@ -32,7 +32,10 @@ cv2.imshow("Grayscale Picture Corrected", corrected)
 
 k = cv2.waitKey(0) & 0xFF
 if k == ord('s'):
-    cv2.imwrite('Grayscale_Corrected_60SS,jpg', corrected)
+    cv2.imwrite('Grayscale_Corrected_60SS.jpg', corrected)
+    cv2.imwrite('Grayscale_30SS.jpg', img_30_shutter)
+    cv2.imwrite('Grayscale_60SS.jpg', img_60_shutter)
+    print("Image written to file-system: ", status)
     cv2.destroyAllWindows()
 else:
     cv2.destroyAllWindows()
